@@ -4,3 +4,4 @@ def header(title):
     print(title)
     print("=" * len(title))
     print()
+

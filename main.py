@@ -1,11 +1,8 @@
-from api import get_keywords
-from movies import ask_keyword, show_keywords, choose_keyword
-
+from keywords import search_keyword
+from movies import discover_movie
 
 def main():
-    user_keyword = ask_keyword()
-    received_keywords = get_keywords(user_keyword)
-    show_keywords(received_keywords)
-    choose_keyword(received_keywords)
+    keyword_id, keyword = search_keyword()
+    discover_movie(keyword_id, keyword)
 
 main()
