@@ -1,14 +1,15 @@
 from api import get_movies
-from helpers import header
-import textwrap
+from helpers import header, create_numerated_list, select_movie, show_movie_info, action_menu
+from watchlist import add_to_watchlist
 
-def show_movielist(movielist):
+def show_movielist(movielist, keyword):
     if not movielist:
-        print("\nThere are no available keywords found based on your entry. Please try again.")
+        print(f"\nNo horror movies were found for the keyword '{keyword}'. Please try a different keyword.")
         return None
     else:
         header("FOUND MOVIES")
-
+        create_numerated_list(movielist, "release_date")
+        #TODO: DRY WITH NUMERATED LIST FUNCTION
         for index, result in enumerate(movielist, start= 1):
             release_date = result.get("release_date")
 
@@ -20,60 +21,24 @@ def show_movielist(movielist):
             print(f"{index}. {result.get('title')} ({release_year})")
         return "Found"
 
-def select_movie(movielist):
-    while True:
-        print("\nChoose a movie by entering its number. \nEnter 0 to return to the main menu.")
-        choice = int(input("Number: "))
-
-        if 1 <= choice <= len(movielist):
-            selected_movie = movielist[choice - 1]
-            print(f"Chosen movie: {selected_movie.get("title")}")
-            return selected_movie
-        elif choice == 0:
-            return None
-        else:
-            print("\nYour selection is not on the list. Please try again.")
-            continue
-
-def show_movie_info(movie):
-    title = movie.get("title")
-    rating = movie.get("vote_average")
-    release_date = movie.get("release_date")
-
-    if rating == 0:
-        rating = "Not yet rated"
-
-    if not release_date:
-        release_date = "TBA"
-
-    header("MOVIE INFO")
-    print(f"Title: {title}\n")
-    print(f"Summary: {textwrap.fill(movie.get("overview"), width= 70)}\n")
-    print(f"Rating: {rating:.1f}")
-    print(f"Release date: {release_date}")
-
-    movie_menu(title)
-
-def movie_menu(movie_title):
-    print("\nWhat would you like to do?")
-    print(f"1. Add {movie_title} to watchlist")
-    print("2. Go back")
-    print("3. Return to main menu")
-    choice = input("\nNumber: ")
-
-def save_movie():
-    pass
-
 def discover_movie(keyword_id, keyword):
+
+    movielist = get_movies(keyword_id)
+
     while True:
-        movielist = get_movies(keyword_id)
-
-        result = show_movielist(movielist)
+        result = show_movielist(movielist, keyword)
         if result is None:
-            return None
+            return "search again"
 
-        selected_movie = select_movie(movielist)
+        selected_movie, movie_index = select_movie(movielist)
         if selected_movie is None:
-            return None
+           return "main menu"
 
-        show_movie_info(selected_movie)
+        movie_title = show_movie_info(selected_movie)
+        action = action_menu(movie_title, selected_movie)
+        if action == "add":
+            add_to_watchlist(movie_title, selected_movie)
+        elif action == "back":
+            continue
+        else:
+            return "main menu"

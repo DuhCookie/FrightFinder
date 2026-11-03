@@ -1,5 +1,6 @@
 from api import get_keywords
-from helpers import header
+from helpers import header, create_numerated_list
+
 
 def ask_keyword():
     header("SEARCH KEYWORD")
@@ -13,8 +14,9 @@ def show_keywords(keywords=dict):
         return None
     else:
         header("FOUND KEYWORDS")
-        for index, result in enumerate(keywords, start=1):
-            print(f"{index}. {result.get('name').capitalize()}")
+        create_numerated_list(keywords, "name")
+        # for index, result in enumerate(keywords, start=1):
+        #     print(f"{index}. {result.get('name').capitalize()}")
         return "Found"
 
 def select_keyword(keywords=dict):

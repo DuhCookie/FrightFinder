@@ -1,0 +1,62 @@
+[
+    {
+        "adult": false,
+        "backdrop_path": "/fJ53qYWJTLOfI2x0csL1vVYfUpa.jpg",
+        "genre_ids": [
+            27,
+            53
+        ],
+        "id": 284564,
+        "title": "31",
+        "original_language": "en",
+        "original_title": "31",
+        "overview": "Five carnival workers are kidnapped and held hostage in an abandoned, Hell-like compound where they are forced to participate in a violent game, the goal of which is to survive twelve hours against a gang of sadistic clowns.",
+        "popularity": 4.0646,
+        "poster_path": "/jHkIIkP4O0vUkSACcizOPZQIiF7.jpg",
+        "release_date": "2016-09-15",
+        "softcore": false,
+        "video": false,
+        "vote_average": 5.409,
+        "vote_count": 883
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/mVNnXW3Hb5fahJRM1yUrSGg7vqK.jpg",
+        "genre_ids": [
+            27,
+            53
+        ],
+        "id": 289712,
+        "title": "Mockingbird",
+        "original_language": "en",
+        "original_title": "Mockingbird",
+        "overview": "A couple are given a camera and a set of instructions which they must follow or else someone will die.",
+        "popularity": 3.6799,
+        "poster_path": "/h7tzWmIOqMlXqakPV21DPCGSFKr.jpg",
+        "release_date": "2014-10-07",
+        "softcore": false,
+        "video": false,
+        "vote_average": 4.7,
+        "vote_count": 154
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [
+            27,
+            35
+        ],
+        "id": 1148948,
+        "title": "Bitches Kill Bitches",
+        "original_language": "en",
+        "original_title": "Bitches Kill Bitches",
+        "overview": "After the newest member of the popular clique receives a devastating breakup call during her initiation, the group must sing and dance their way to sisterhood and bloody revenge.",
+        "popularity": 0.6982,
+        "poster_path": "/4RwSDuYAFGLEMZNqCWQUy96xx4Y.jpg",
+        "release_date": "2023-08-06",
+        "softcore": false,
+        "video": false,
+        "vote_average": 10.0,
+        "vote_count": 1
+    }
+]
