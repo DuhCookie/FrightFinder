@@ -1,7 +1,6 @@
 from api import get_keywords
 from helpers import header, create_numerated_list
 
-
 def ask_keyword():
     header("SEARCH KEYWORD")
     print("What kind of horror movie are you looking for?")

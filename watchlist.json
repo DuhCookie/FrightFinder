@@ -1,26 +1,6 @@
 [
     {
         "adult": false,
-        "backdrop_path": "/mVNnXW3Hb5fahJRM1yUrSGg7vqK.jpg",
-        "genre_ids": [
-            27,
-            53
-        ],
-        "id": 289712,
-        "title": "Mockingbird",
-        "original_language": "en",
-        "original_title": "Mockingbird",
-        "overview": "A couple are given a camera and a set of instructions which they must follow or else someone will die.",
-        "popularity": 3.6799,
-        "poster_path": "/h7tzWmIOqMlXqakPV21DPCGSFKr.jpg",
-        "release_date": "2014-10-07",
-        "softcore": false,
-        "video": false,
-        "vote_average": 4.7,
-        "vote_count": 154
-    },
-    {
-        "adult": false,
         "backdrop_path": "/9gH2SoZCI6uKs0GY15L3bmu9s9w.jpg",
         "genre_ids": [
             27
@@ -140,5 +120,24 @@
         "video": false,
         "vote_average": 7.317,
         "vote_count": 1500
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/8cxB1CiiODiWFayDPxLsAeviZvc.jpg",
+        "genre_ids": [
+            27
+        ],
+        "id": 10014,
+        "title": "A Nightmare on Elm Street Part 2: Freddy's Revenge",
+        "original_language": "en",
+        "original_title": "A Nightmare on Elm Street Part 2: Freddy's Revenge",
+        "overview": "A teenage boy is haunted in his dreams by deceased child murderer Freddy Krueger, who is out to possess him in order to continue his reign of terror in the real world.",
+        "popularity": 12.5915,
+        "poster_path": "/53kxYw0G3o55yJ23K7s7KMaOyAM.jpg",
+        "release_date": "1985-11-01",
+        "softcore": false,
+        "video": false,
+        "vote_average": 5.801,
+        "vote_count": 2236
     }
 ]

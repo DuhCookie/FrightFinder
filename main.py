@@ -1,6 +1,6 @@
 from helpers import header
 from keywords import search_keyword
-from movies import discover_movie
+from movies import discover_movie, fright_rouelette_menu
 from watchlist import watchlist_menu
 
 def show_main_menu():
@@ -30,8 +30,7 @@ def main():
                         continue
 
             case "2":
-                pass
-                # movie_randomizer
+                fright_rouelette_menu()
             case "3":
                 watchlist_menu()
             case "4":

@@ -40,7 +40,7 @@ def view_watchlist():
 
 def remove_from_watchlist(selected_movie, index):
     while True:
-        print(f"Are you sure you want to delete '{selected_movie.get("title")}' from your watchlist?")
+        print(f"\nAre you sure you want to remove '{selected_movie.get("title")}' from your watchlist?")
         choice = input("Y/N: ").capitalize()
 
         if choice == "Y":
@@ -50,7 +50,7 @@ def remove_from_watchlist(selected_movie, index):
             with open("watchlist.json", "w") as file:
                 json.dump(watchlist, file, indent=4)
 
-            print(f"{selected_movie.get("title")} has been removed from your watchlist!")
+            print(f"\n{selected_movie.get("title")} has been removed from your watchlist!")
             break
         elif choice == "N":
             break
