@@ -31,7 +31,6 @@ def action_menu(movie_title, watchlist=False):
         print("\nWhat would you like to do?")
         print(f"1. {action}")
         print("2. Go back")
-        print("3. Return to main menu")
         choice = input("\nNumber: ")
 
         match choice:
@@ -42,8 +41,6 @@ def action_menu(movie_title, watchlist=False):
                     return "add"
             case "2":
                 return "back"
-            case "3":
-                return "main menu"
             case _:
                 print("Invalid choice. Please try again")
                 continue

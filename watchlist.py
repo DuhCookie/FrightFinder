@@ -17,17 +17,17 @@ def watchlist_menu():
             remove_from_watchlist(selected_movie, movie_index)
         elif action == "back":
             continue
-        else:
-            return "main menu"
 
 def add_to_watchlist(movie_title, movie):
-    watchlist = open_watchlist("r")
-    watchlist.append(movie)
+    if is_movie_in_watchlist(movie):
+        watchlist = open_watchlist("r")
+        watchlist.append(movie)
+        with open("watchlist.json", "w") as file:
+            json.dump(watchlist, file, indent= 4)
 
-    with open("watchlist.json", "w") as file:
-        json.dump(watchlist, file, indent= 4)
-
-    print(f"{movie_title} has been added to your watchlist!")
+        print(f"\n{movie_title} has been added to your watchlist!")
+    else:
+        print(f"\n{movie_title} has already been added to your watchlist!")
 
 def view_watchlist():
     watchlist = open_watchlist("r")

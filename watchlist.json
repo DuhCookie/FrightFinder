@@ -139,5 +139,185 @@
         "video": false,
         "vote_average": 5.801,
         "vote_count": 2236
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/yRV8zVoc4POUFuuHiqVkXTOirlZ.jpg",
+        "genre_ids": [
+            27,
+            14
+        ],
+        "id": 1625523,
+        "title": "Tecolote",
+        "original_language": "en",
+        "original_title": "Tecolote",
+        "overview": "In 1873, a witch marks a family for death.",
+        "popularity": 1.7028,
+        "poster_path": "/lp6alz2yFJ4WKpRC06njt3ErT9H.jpg",
+        "release_date": "2026-05-17",
+        "softcore": false,
+        "video": false,
+        "vote_average": 0.0,
+        "vote_count": 0
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/92VhOIRgkI4s1zCwc6VQPkZNKyA.jpg",
+        "genre_ids": [
+            28,
+            27
+        ],
+        "id": 1268037,
+        "title": "The Summoner",
+        "original_language": "en",
+        "original_title": "The Summoner",
+        "overview": "In a world where spirits of the dead are the most pervasive and dangerous threat we face, humankind must call upon the skills of an enigmatic ghost-hunter who gets more than he bargained for facing the most deadly threat of his career.",
+        "popularity": 1.8788,
+        "poster_path": "/o102xFACWhs4xlZI1BZQU9G1IAE.jpg",
+        "release_date": "2017-11-08",
+        "softcore": false,
+        "video": false,
+        "vote_average": 0.0,
+        "vote_count": 0
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/bHfGHipZ32Oec94FDJO4mWs3aZ5.jpg",
+        "genre_ids": [
+            27
+        ],
+        "id": 1034541,
+        "title": "Terrifier 3",
+        "original_language": "en",
+        "original_title": "Terrifier 3",
+        "overview": "Five years after surviving Art the Clown's Halloween massacre, Sienna and Jonathan are still struggling to rebuild their shattered lives. As the holiday season approaches, they try to embrace the Christmas spirit and leave the horrors of the past behind. But just when they think they're safe, Art returns, determined to turn their holiday cheer into a new nightmare. The festive season quickly unravels as Art unleashes his twisted brand of terror, proving that no holiday is safe.",
+        "popularity": 26.6783,
+        "poster_path": "/ju10W5gl3PPK3b7TjEmVOZap51I.jpg",
+        "release_date": "2024-10-09",
+        "softcore": false,
+        "video": false,
+        "vote_average": 6.746,
+        "vote_count": 2094
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/sTvhx1gqmQklmf9LDSnjLN6mvTd.jpg",
+        "genre_ids": [
+            27
+        ],
+        "id": 818883,
+        "title": "The Devil's Child",
+        "original_language": "es",
+        "original_title": "Diavlo",
+        "overview": "A young American nurse finds herself haunted by childhood trauma, when she is employed at a remote house to care for a sinister old man with psychic powers.",
+        "popularity": 1.685,
+        "poster_path": "/47xEQRZrfBPCSWgKpScLuXIsJxL.jpg",
+        "release_date": "2022-04-28",
+        "softcore": false,
+        "video": false,
+        "vote_average": 6.1,
+        "vote_count": 9
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/utABPVjXBlM8NUOBecCyLLuzQSe.jpg",
+        "genre_ids": [
+            18,
+            27,
+            53
+        ],
+        "id": 17609,
+        "title": "Antichrist",
+        "original_language": "en",
+        "original_title": "Antichrist",
+        "overview": "A grieving couple retreats to their cabin 'Eden' in the woods, hoping to repair their broken hearts and troubled marriage. But nature takes its course and things go from bad to worse.",
+        "popularity": 5.5535,
+        "poster_path": "/ge7zbYvpfsDP3luKi0iSpzOgncM.jpg",
+        "release_date": "2009-05-20",
+        "softcore": false,
+        "video": false,
+        "vote_average": 6.608,
+        "vote_count": 2958
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/c7iAc9WzWetT1bAqFJP6GAlJVol.jpg",
+        "genre_ids": [
+            27,
+            35
+        ],
+        "id": 1495039,
+        "title": "The Wheel Killer",
+        "original_language": "en",
+        "original_title": "The Wheel Killer",
+        "overview": "While a civilian is spending time at the skate park, a sinister man in a wheelchair attempts to murder him.",
+        "popularity": 0.4103,
+        "poster_path": "/nkOOjCNcbzZd33lVbaFf6RPM9bW.jpg",
+        "release_date": "2025-06-08",
+        "softcore": false,
+        "video": false,
+        "vote_average": 10.0,
+        "vote_count": 1
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/8DHvtmF15wGwkMOW3nqZmpEzEaq.jpg",
+        "genre_ids": [
+            27,
+            9648
+        ],
+        "id": 751237,
+        "title": "Umma",
+        "original_language": "en",
+        "original_title": "Umma",
+        "overview": "Amanda and her daughter live a quiet life on an American farm, but when the remains of her estranged mother arrive from Korea, Amanda becomes haunted by the fear of turning into her own mother.",
+        "popularity": 2.6715,
+        "poster_path": "/moLnqJmZ00i2opS0bzCVcaGC0iI.jpg",
+        "release_date": "2022-03-18",
+        "softcore": false,
+        "video": false,
+        "vote_average": 5.269,
+        "vote_count": 342
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/3yRDQJU6GfUhFa8g6Yxd8ImQfBH.jpg",
+        "genre_ids": [
+            18,
+            27,
+            53
+        ],
+        "id": 640196,
+        "title": "Signal 100",
+        "original_language": "ja",
+        "original_title": "\u30b7\u30b0\u30ca\u30eb100",
+        "overview": "A group of high school students are forced into a game where they are hypnotized to commit suicide on an unknown command. Where no one is safe from a sudden death, how can they avoid their fates?",
+        "popularity": 1.3682,
+        "poster_path": "/tQ8xH60exuplfaadvgjG8gINqVJ.jpg",
+        "release_date": "2020-01-24",
+        "softcore": false,
+        "video": false,
+        "vote_average": 5.895,
+        "vote_count": 19
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/yXSvMItCx4ddhmKvt0r8bkmtf80.jpg",
+        "genre_ids": [
+            53,
+            27
+        ],
+        "id": 76875,
+        "title": "Games",
+        "original_language": "en",
+        "original_title": "Games",
+        "overview": "Wealthy and bored, Paul and Jennifer Montgomery spend their time in a New York City apartment filled with various amusements. Their routine is upended when door-to-door saleswoman Lisa Schindler drops by and is suddenly taken ill. The couple let her spend the night, and soon, the sophisticated Lisa and her hosts embark on a new set of very adult \u2013 and very dangerous \u2013 games.",
+        "popularity": 1.3805,
+        "poster_path": "/fF65rqiiPlvNbphuM53GQrtnqyL.jpg",
+        "release_date": "1967-09-17",
+        "softcore": false,
+        "video": false,
+        "vote_average": 6.2,
+        "vote_count": 38
     }
 ]
