@@ -3,7 +3,7 @@ from helpers import header, create_numerated_list
 
 def ask_keyword():
     header("SEARCH KEYWORD")
-    print("What kind of horror movie are you looking for?")
+    print("\nWhat kind of horror movie are you looking for?")
     keyword = input("Enter a keyword, theme or topic to get started: ")
     return keyword
 
@@ -14,8 +14,6 @@ def show_keywords(keywords=dict):
     else:
         header("FOUND KEYWORDS")
         create_numerated_list(keywords, "name")
-        # for index, result in enumerate(keywords, start=1):
-        #     print(f"{index}. {result.get('name').capitalize()}")
         return "Found"
 
 def select_keyword(keywords=dict):
@@ -38,7 +36,7 @@ def select_keyword(keywords=dict):
 def search_keyword():
     """
     Prompts the user to search for and select a keyword.
-    :return:
+    :return: The selected keyword ID and keyword name.
     """
     while True:
         user_keyword = ask_keyword()

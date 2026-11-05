@@ -12,7 +12,7 @@ def show_movielist(movielist, keyword):
         create_numerated_list(movielist, "title", with_releaseyear=True)
         return "Found"
 
-def discover_movie(keyword_id, keyword):
+def discover_movies(keyword_id, keyword):
     movielist = get_movies(keyword_id)
 
     while True:
@@ -20,7 +20,7 @@ def discover_movie(keyword_id, keyword):
         if result is None:
             return "search again"
 
-        # handle_movie_selection(movielist)
+        # handle_movie_selection(movielist) for discover movies and watchlist
 
         selected_movie, movie_index = select_movie(movielist)
         if selected_movie is None:
@@ -45,14 +45,14 @@ def get_random_movie(vote_average=None, min_release_date=None, max_release_date=
 
 def show_random_movie(movie):
     header("YOU'VE SPUN THE FRIGHT ROULETTE!")
-    print("Fate has decided...")
+    print("\nFate has decided...")
     movie_title = movie.get("title")
     print(f"\nYour movie is: {movie_title}")
 
 def fright_rouelette_menu():
     while True:
         header("FRIGHT ROULETTE")
-        print("Can't decide what to watch? \nLet fate decide...")
+        print("\nCan't decide what to watch? \nLet fate decide...")
         print("\nChoose your roulette mode!")
         print("1. Completely random")
         print("2. Spin by rating")
@@ -60,54 +60,19 @@ def fright_rouelette_menu():
         print("0. Go back")
         choice = input("\nNumber: ")
 
-        match choice:
-            case "1":
-                while True:
-                    movie = get_random_movie()
-                    action = fright_roulette_sub_menu(movie)
-                    if action == "again":
-                        continue
-                    elif action == "back":
-                        break
-                    elif action == "main menu":
-                        return
-            case "2":
-                rating = random_rating_menu()
-                if not rating:
-                    return
-
-                while True:
-                    movie = get_random_movie(rating)
-                    action = fright_roulette_sub_menu(movie)
-                    if action == "again":
-                        continue
-                    elif action == "back":
-                        break
-                    elif action == "main menu":
-                        return
-            case "3":
-                result = random_year_menu()
-                if result == "main menu":
-                    return
-                else:
-                    min_release_date, max_release_date = result
-
-                while True:
-                    movie = get_random_movie(None, min_release_date, max_release_date)
-                    action = fright_roulette_sub_menu(movie)
-                    if action == "again":
-                        continue
-                    elif action == "back":
-                        break
-                    elif action == "main menu":
-                        return
-            case "0":
+        if choice == "1" or choice == "2" or choice == "3":
+            action = play_roulette_round(choice)
+            if action == "main menu":
                 break
-            case _:
-                print("Invalid option. Please try again.")
+            else:
                 continue
+        elif choice == "0":
+            break
+        else:
+            print("Invalid option. Please try again.")
+            continue
 
-def fright_roulette_sub_menu(movie):
+def roulette_movie_menu(movie):
     while True:
         show_random_movie(movie)
         print("\nWhat would you like to do?")
@@ -136,15 +101,16 @@ def fright_roulette_sub_menu(movie):
                 print("Invalid choice. Please try again.")
                 continue
 
-def random_rating_menu():
+def roulette_rating_menu():
     while True:
         header("FRIGHT ROULETTE: SPIN BY RATING")
-        print("What is your minimum rating?")
-        print("\n1. 5.0+")
+        print("\nWhat is your minimum rating?")
+        print("1. 5.0+")
         print("2. 6.0+")
         print("3. 7.0+")
         print("4. 8.0+")
         print("5. Custom rating")
+        print("\n6. Go back")
         print("0. Main Menu")
         choice = input("\nNumber: ")
 
@@ -168,22 +134,25 @@ def random_rating_menu():
                     except ValueError:
                         print("\nPlease enter a valid number.\n") #TODO: logging
                         continue
+            case "6":
+                return "back"
             case "0":
-                return None
+                return "main menu"
             case _:
                 print("Invalid Choice. Please try again.")
                 continue
 
-def random_year_menu():
+def roulette_year_menu():
     while True:
         header("FRIGHT ROULETTE: SPIN BY YEAR")
-        print("Choose your era!")
-        print("\n1. Classic Horror (before 1980)")
+        print("\nChoose your era!")
+        print("1. Classic Horror (before 1980)")
         print("2. 80s Horror")
         print("3. 90s Horror")
         print("4. 2000s Horror")
         print("5. Modern Horror (2010+)")
-        print("6. Main Menu")
+        print("\n6. Go back")
+        print("0. Main Menu")
         choice = input("\nNumber: ")
 
         match choice:
@@ -198,10 +167,44 @@ def random_year_menu():
             case "5":
                 return "2010-01-01", None
             case "6":
+                return "back"
+            case "0":
                 return "main menu"
             case _:
                 print("Invalid Choice. Please try again.")
                 continue
+
+def play_roulette_round(roulette_mode):
+    while True:
+        if roulette_mode == "2":
+            rating = roulette_rating_menu()
+            if rating == "main menu":
+                return "main menu"
+            elif rating == "back":
+                return "back"
+
+            movie = get_random_movie(rating)
+
+        elif roulette_mode == "3":
+            result = roulette_year_menu()
+            if result == "main menu":
+                return "main menu"
+            elif result == "back":
+                return "back"
+            else:
+                min_release_date, max_release_date = result
+
+            movie = get_random_movie(None, min_release_date, max_release_date)
+        else:
+            movie = get_random_movie()
+
+        action = roulette_movie_menu(movie)
+        if action == "again":
+            continue
+        elif action == "back":
+            return "back"
+        elif action == "main menu":
+            return "main menu"
 
 
 

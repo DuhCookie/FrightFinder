@@ -1,10 +1,15 @@
+import random
 import textwrap
 
 def header(title):
+    icon = get_icon()
+    border = "꒷꒦︶꒷꒦︶꒷꒦" * 6
+    title = f"{icon} {title} {icon}"
+    title = title.center(len(border))
     print()
-    print("=" * len(title))
+    print(border)
     print(title)
-    print("=" * len(title))
+    print(border)
 
 def create_numerated_list(received_list, key, with_releaseyear=False):
     if with_releaseyear:
@@ -74,13 +79,31 @@ def show_movie_info(movie):
         release_date = "TBA"
 
     header("MOVIE INFO")
-    print(f"Title: {title}\n")
+    print(f"\nTitle: {title}\n")
     print(f"Summary: {textwrap.fill(movie.get("overview"), width= 70)}\n")
     print(f"Rating: {rating}")
     print(f"Release date: {release_date}")
     print(f"Language: {movie.get("original_language")}")
 
     return title
+
+def get_icon():
+    icons = {
+        1: "🕯️",
+        2: "🎃",
+        3: "🩸",
+        4: "🔪",
+        5: "🕸️",
+        6: "🐈‍⬛",
+        7: "𐕣",
+        8: "💉",
+        9: "💀",
+        10: "🫀",
+        11: "ִִֶֶָ🥀",
+        12: "🕷"
+    }
+    icon_number = random.randint(1, len(icons))
+    return icons.get(icon_number)
 
 # def handle_movie_selection(movielist):
 #     selected_movie, movie_index = select_movie(movielist)

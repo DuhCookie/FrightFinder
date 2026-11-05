@@ -319,5 +319,47 @@
         "video": false,
         "vote_average": 6.2,
         "vote_count": 38
+    },
+    {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [
+            27
+        ],
+        "id": 331839,
+        "title": "Rahsia",
+        "original_language": "en",
+        "original_title": "Rahsia",
+        "overview": "It tells the story of a family whose recent loss of their daughter make them receptive to the haunting of a murdered child as they move into an old bungalow.",
+        "popularity": 3.22,
+        "poster_path": "/6evUr1bJgYfB6PmFY6XIEMR7dwX.jpg",
+        "release_date": "1987-01-01",
+        "softcore": false,
+        "video": false,
+        "vote_average": 10.0,
+        "vote_count": 1
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/zbbG9nDXKwnTYISrQVNx4RGBukI.jpg",
+        "genre_ids": [
+            28,
+            18,
+            27,
+            10749,
+            878
+        ],
+        "id": 860027,
+        "title": "Mask of the Evil Apparition",
+        "original_language": "en",
+        "original_title": "Mask of the Evil Apparition",
+        "overview": "A young woman lost in a nocturnal, dreamlike city, with her twin psychic brothers who try to help her find her way home as she is pursued by a shadowy cult known as The Mysterious Ones.",
+        "popularity": 1.2361,
+        "poster_path": "/76aCTw8Xd3gRMp5L39F3busi5LV.jpg",
+        "release_date": "2021-11-18",
+        "softcore": false,
+        "video": false,
+        "vote_average": 4.0,
+        "vote_count": 1
     }
 ]
