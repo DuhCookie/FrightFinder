@@ -361,5 +361,24 @@
         "video": false,
         "vote_average": 4.0,
         "vote_count": 1
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/xjB1kX4CUDAYLkZyPJf3QJZIAxa.jpg",
+        "genre_ids": [
+            27
+        ],
+        "id": 1372160,
+        "title": "God of Frogs",
+        "original_language": "en",
+        "original_title": "God of Frogs",
+        "overview": "An Anthology film about four segments surrounding the same monster. Deep in the heart of the jungle exists an elemental creature with an eternal hunger, and every 25 years, it emerges: a woman is eaten alive in 1969, a film crew goes missing in 1994, a politician explodes live on television in 2019, and a multinational corporation goes up in flames in 2044.",
+        "popularity": 1.5227,
+        "poster_path": "/fwnXwNRnxwtCJXLsM0EiRm2Vvoc.jpg",
+        "release_date": "2026-03-02",
+        "softcore": false,
+        "video": false,
+        "vote_average": 6.3,
+        "vote_count": 3
     }
 ]

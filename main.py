@@ -3,14 +3,17 @@ from keywords import search_keyword
 from movies import discover_movies, fright_rouelette_menu
 from watchlist import watchlist_menu
 
+from rich.console import Console
+console = Console(force_terminal=True, legacy_windows=False, highlight=False)
+
 def show_main_menu():
     header("FRIGHTFINDER")
-    print("\nFind the perfect horror movie for your movie night.\n")
-    print("What do you want to do?")
-    print("1. Discover Horror Movies")
-    print("2. Fright roulette")
-    print("3. My watchlist")
-    print("4. Exit")
+    console.print("\nFind the perfect horror movie for your movie night.\n", style="italic")
+    console.print("What do you want to do?")
+    console.print("1. Discover Horror Movies")
+    console.print("2. Fright roulette")
+    console.print("3. My watchlist")
+    console.print("4. Exit")
 
 def main():
     while True:
@@ -34,7 +37,7 @@ def main():
             case "4":
                 exit()
             case _:
-                print("Invalid Choice. Please try again.")
+                console.print("Invalid Choice. Please try again.")
                 continue
 
 main()

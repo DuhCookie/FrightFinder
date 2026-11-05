@@ -1,6 +1,9 @@
 import json
 from helpers import create_numerated_list, header, select_movie, show_movie_info, action_menu
 
+from rich.console import Console
+console = Console(force_terminal=True, legacy_windows=False, highlight=False)
+
 def watchlist_menu():
     while True:
         header("MY WATCHLIST")

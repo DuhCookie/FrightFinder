@@ -1,3 +1,4 @@
 # Application dependencies
 python-dotenv
 requests
+rich

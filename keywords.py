@@ -1,6 +1,9 @@
 from api import get_keywords
 from helpers import header, create_numerated_list
 
+from rich.console import Console
+console = Console(force_terminal=True, legacy_windows=False, highlight=False)
+
 def ask_keyword():
     header("SEARCH KEYWORD")
     print("\nWhat kind of horror movie are you looking for?")
