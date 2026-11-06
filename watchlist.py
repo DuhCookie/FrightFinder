@@ -1,5 +1,5 @@
 import json
-from helpers import create_numerated_list, header, select_movie, show_movie_info, action_menu, create_table
+from helpers import header, show_movie_info, action_menu, create_table, select_from_list
 
 from rich.console import Console
 console = Console(force_terminal=True, legacy_windows=False, highlight=False)
@@ -9,7 +9,7 @@ def watchlist_menu():
         header("MY WATCHLIST")
         watchlist = view_watchlist()
 
-        selected_movie, movie_index = select_movie(watchlist)
+        selected_movie, movie_index = select_from_list(watchlist)
         if selected_movie is None:
             break
 

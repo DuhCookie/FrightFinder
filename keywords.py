@@ -1,5 +1,5 @@
 from api import get_keywords
-from helpers import header, create_numerated_list, create_table
+from helpers import header, create_numerated_list, create_table, select_from_list
 
 from rich.console import Console
 console = Console(force_terminal=True, legacy_windows=False, highlight=False)
@@ -20,23 +20,6 @@ def show_keywords(keywords=dict):
         console.print(keyword_table)
         return "Found"
 
-def select_keyword(keywords=dict):
-    while True:
-        print("Choose a keyword by entering its number. \nEnter 0 to search for another keyword.")
-        choice = int(console.input("[bold on #800000]Number:[/] "))
-
-        if  1 <= choice <= len(keywords):
-            selected = keywords[choice - 1]
-            selected_id = selected.get("id")
-            selected_keyword = selected.get("name").capitalize()
-            print(f"Chosen keyword: {selected_keyword}")
-            return selected_id, selected_keyword
-        elif choice == 0:
-            return None
-        else:
-            print("\nYour selection is not on the list. Please try again.")
-            continue
-
 def search_keyword():
     """
     Prompts the user to search for and select a keyword.
@@ -49,9 +32,28 @@ def search_keyword():
         result = show_keywords(received_keywords)
         if result is None:
             continue
-        result = select_keyword(received_keywords)
+        result = select_from_list(received_keywords, "keywords")
         if result is None:
             continue
 
         selected_id, selected_keyword = result
         return selected_id, selected_keyword
+
+#### DELETE
+
+def select_keyword(keywords=dict):
+    while True:
+        print("Choose a keyword by entering its number. \nEnter 0 to search for another keyword.\n")
+        choice = int(console.input("[bold on #800000]Number:[/] "))
+
+        if  1 <= choice <= len(keywords):
+            selected = keywords[choice - 1]
+            selected_id = selected.get("id")
+            selected_keyword = selected.get("name").capitalize()
+            console.print(f"\n[bold on #800000]Chosen keyword:[/] {selected_keyword}")
+            return selected_id, selected_keyword
+        elif choice == 0:
+            return None
+        else:
+            print("\nYour selection is not on the list. Please try again.")
+            continue
