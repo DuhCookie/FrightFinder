@@ -1,4 +1,4 @@
-from helpers import header
+from helpers import header, create_table
 from keywords import search_keyword
 from movies import discover_movies, fright_rouelette_menu
 from watchlist import watchlist_menu
@@ -8,17 +8,20 @@ console = Console(force_terminal=True, legacy_windows=False, highlight=False)
 
 def show_main_menu():
     header("FRIGHTFINDER")
-    console.print("\nFind the perfect horror movie for your movie night.\n", style="italic")
-    console.print("What do you want to do?")
-    console.print("1. Discover Horror Movies")
-    console.print("2. Fright roulette")
-    console.print("3. My watchlist")
-    console.print("4. Exit")
+    console.print("\nFind the perfect horror movie for your movie night.", style="italic")
+    menu_options = [
+        "Discover Horror Movies",
+        "Fright roulette",
+        "My watchlist",
+        "Exit"
+    ]
+    menu = create_table("What do you want to do?", menu_options)
+    console.print(menu)
 
 def main():
     while True:
         show_main_menu()
-        choice = input("\nNumber: ")
+        choice = console.input("[bold on #800000]Number:[/] ")
 
         match choice:
             case "1":

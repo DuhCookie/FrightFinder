@@ -1,5 +1,5 @@
 from api import get_movies
-from helpers import header, create_numerated_list, select_movie, show_movie_info, action_menu
+from helpers import header, select_movie, show_movie_info, action_menu, create_table
 from watchlist import add_to_watchlist, is_movie_in_watchlist
 import random
 
@@ -12,7 +12,8 @@ def show_movielist(movielist, keyword):
         return None
     else:
         header("FOUND MOVIES")
-        create_numerated_list(movielist, "title", with_releaseyear=True)
+        movie_table = create_table(None, movielist, False, "title", True)
+        console.print(movie_table)
         return "Found"
 
 def discover_movies(keyword_id, keyword):
@@ -56,12 +57,15 @@ def fright_rouelette_menu():
     while True:
         header("FRIGHT ROULETTE")
         console.print("\nCan't decide what to watch? \nLet fate decide...", style="italic")
-        console.print("\nChoose your roulette mode!")
-        console.print("1. Completely random")
-        console.print("2. Spin by rating")
-        console.print("3. Spin by release year")
-        console.print("0. Go back")
-        choice = input("\nNumber: ")
+        menu_text = [
+            "Completely random",
+            "Spin by rating",
+            "Spin by release year",
+            "Go back"
+        ]
+        menu = create_table("Choose your roulette mode!", menu_text)
+        console.print(menu)
+        choice = console.input("[bold on #800000]Number:[/] ")
 
         if choice == "1" or choice == "2" or choice == "3":
             action = play_roulette_round(choice)
@@ -69,7 +73,7 @@ def fright_rouelette_menu():
                 break
             else:
                 continue
-        elif choice == "0":
+        elif choice == "4":
             break
         else:
             console.print("Invalid option. Please try again.")
@@ -77,14 +81,18 @@ def fright_rouelette_menu():
 
 def roulette_movie_menu(movie):
     while True:
+        menu_text = [
+            "Spin again",
+            "View movie details",
+            "Add to watchlist",
+            "Back to roulette",
+            "Main Menu"
+        ]
         show_random_movie(movie)
-        console.print("\nWhat would you like to do?")
-        console.print("1. Spin again")
-        console.print("2. View movie details")
-        console.print("3. Add to watchlist")
-        console.print("4. Back to roulette")
-        console.print("0. Main Menu")
-        choice = input("\nNumber: ")
+
+        menu = create_table("What do you want to do?", menu_text)
+        console.print(menu)
+        choice = console.input("[bold on #800000]Number:[/] ")
 
         match choice:
             case "1":
@@ -98,7 +106,7 @@ def roulette_movie_menu(movie):
                 add_to_watchlist(movie.get("title"), movie)
             case "4":
                 return "back"
-            case "0":
+            case "5":
                 return "main menu"
             case _:
                 console.print("Invalid choice. Please try again.")
@@ -107,15 +115,20 @@ def roulette_movie_menu(movie):
 def roulette_rating_menu():
     while True:
         header("FRIGHT ROULETTE: SPIN BY RATING")
-        console.print("\nWhat is your minimum rating?")
-        console.print("1. 5.0+")
-        console.print("2. 6.0+")
-        console.print("3. 7.0+")
-        console.print("4. 8.0+")
-        console.print("5. Custom rating")
-        console.print("\n6. Go back")
-        console.print("0. Main Menu")
-        choice = input("\nNumber: ")
+
+        menu_text = [
+            "5.0+",
+            "6.0+",
+            "7.0+",
+            "8.0+",
+            "Custom rating",
+            "Go back",
+            "Main Menu"
+        ]
+
+        menu = create_table("What is your minimum rating?", menu_text)
+        console.print(menu)
+        choice = console.input("[bold on #800000]Number:[/] ")
 
         match choice:
             case "1":
@@ -129,7 +142,7 @@ def roulette_rating_menu():
             case "5":
                 while True:
                     try:
-                        min_rating = float(input("Enter a custom rating: "))
+                        min_rating = float(console.input("Enter a custom rating: "))
                         if 1 <= min_rating <= 10:
                             return min_rating
                         else:
@@ -139,7 +152,7 @@ def roulette_rating_menu():
                         continue
             case "6":
                 return "back"
-            case "0":
+            case "7":
                 return "main menu"
             case _:
                 console.print("Invalid Choice. Please try again.")
@@ -148,15 +161,19 @@ def roulette_rating_menu():
 def roulette_year_menu():
     while True:
         header("FRIGHT ROULETTE: SPIN BY YEAR")
-        console.print("\nChoose your era!")
-        console.print("1. Classic Horror (before 1980)")
-        console.print("2. 80s Horror")
-        console.print("3. 90s Horror")
-        console.print("4. 2000s Horror")
-        console.print("5. Modern Horror (2010+)")
-        console.print("\n6. Go back")
-        console.print("0. Main Menu")
-        choice = input("\nNumber: ")
+        menu_text = [
+            "Classic Horror (before 1980)",
+            "80s Horror",
+            "90s Horror",
+            "2000s Horror",
+            "Modern Horror (2010+)",
+            "Go back",
+            "Main Menu"
+        ]
+
+        menu = create_table("Choose your era!", menu_text)
+        console.print(menu)
+        choice = console.console.input("[bold on #800000] Number[/]: ")
 
         match choice:
             case "1":
@@ -171,7 +188,7 @@ def roulette_year_menu():
                 return "2010-01-01", None
             case "6":
                 return "back"
-            case "0":
+            case "7":
                 return "main menu"
             case _:
                 console.print("Invalid Choice. Please try again.")

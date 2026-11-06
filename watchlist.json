@@ -1,25 +1,6 @@
 [
     {
         "adult": false,
-        "backdrop_path": "/9gH2SoZCI6uKs0GY15L3bmu9s9w.jpg",
-        "genre_ids": [
-            27
-        ],
-        "id": 29130,
-        "title": "The Demoniacs",
-        "original_language": "fr",
-        "original_title": "Les D\u00e9moniaques",
-        "overview": "A gang of pirates rape the two sole survivors of a ship wreck. The violated girls are rescued by the strange inhabitants of a supposedly haunted island, where they are granted supernatural powers to strike revenge against the pirates.",
-        "popularity": 3.9725,
-        "poster_path": "/bGyBRAxXeWmNMnPGmzA12SJhS9w.jpg",
-        "release_date": "1974-12-05",
-        "softcore": false,
-        "video": false,
-        "vote_average": 5.786,
-        "vote_count": 96
-    },
-    {
-        "adult": false,
         "backdrop_path": "/qVGpxnjrGlHaSTCqTQI6viBDSfp.jpg",
         "genre_ids": [
             27,
@@ -82,28 +63,6 @@
     },
     {
         "adult": false,
-        "backdrop_path": "/f3I8RVm9arCJnIeFI4U2DZf4BXU.jpg",
-        "genre_ids": [
-            35,
-            18,
-            14,
-            27
-        ],
-        "id": 1710466,
-        "title": "Alakazam - The Movie",
-        "original_language": "pt",
-        "original_title": "Alakazam - O Filme",
-        "overview": "A new nanny takes on the care of two children after a family tragedy. She discovers supernatural secrets about the children's lineage and must protect them from dangerous threats.",
-        "popularity": 0.428,
-        "poster_path": "/2p0hTBeWcVZtRXLIf4mdDCI1yD8.jpg",
-        "release_date": "2020-02-06",
-        "softcore": false,
-        "video": false,
-        "vote_average": 0.0,
-        "vote_count": 0
-    },
-    {
-        "adult": false,
         "backdrop_path": "/zfw3fcF7d4KcWYEvps4zUfl303b.jpg",
         "genre_ids": [
             27
@@ -139,26 +98,6 @@
         "video": false,
         "vote_average": 5.801,
         "vote_count": 2236
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/yRV8zVoc4POUFuuHiqVkXTOirlZ.jpg",
-        "genre_ids": [
-            27,
-            14
-        ],
-        "id": 1625523,
-        "title": "Tecolote",
-        "original_language": "en",
-        "original_title": "Tecolote",
-        "overview": "In 1873, a witch marks a family for death.",
-        "popularity": 1.7028,
-        "poster_path": "/lp6alz2yFJ4WKpRC06njt3ErT9H.jpg",
-        "release_date": "2026-05-17",
-        "softcore": false,
-        "video": false,
-        "vote_average": 0.0,
-        "vote_count": 0
     },
     {
         "adult": false,
@@ -241,46 +180,6 @@
     },
     {
         "adult": false,
-        "backdrop_path": "/c7iAc9WzWetT1bAqFJP6GAlJVol.jpg",
-        "genre_ids": [
-            27,
-            35
-        ],
-        "id": 1495039,
-        "title": "The Wheel Killer",
-        "original_language": "en",
-        "original_title": "The Wheel Killer",
-        "overview": "While a civilian is spending time at the skate park, a sinister man in a wheelchair attempts to murder him.",
-        "popularity": 0.4103,
-        "poster_path": "/nkOOjCNcbzZd33lVbaFf6RPM9bW.jpg",
-        "release_date": "2025-06-08",
-        "softcore": false,
-        "video": false,
-        "vote_average": 10.0,
-        "vote_count": 1
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/8DHvtmF15wGwkMOW3nqZmpEzEaq.jpg",
-        "genre_ids": [
-            27,
-            9648
-        ],
-        "id": 751237,
-        "title": "Umma",
-        "original_language": "en",
-        "original_title": "Umma",
-        "overview": "Amanda and her daughter live a quiet life on an American farm, but when the remains of her estranged mother arrive from Korea, Amanda becomes haunted by the fear of turning into her own mother.",
-        "popularity": 2.6715,
-        "poster_path": "/moLnqJmZ00i2opS0bzCVcaGC0iI.jpg",
-        "release_date": "2022-03-18",
-        "softcore": false,
-        "video": false,
-        "vote_average": 5.269,
-        "vote_count": 342
-    },
-    {
-        "adult": false,
         "backdrop_path": "/3yRDQJU6GfUhFa8g6Yxd8ImQfBH.jpg",
         "genre_ids": [
             18,
@@ -322,63 +221,23 @@
     },
     {
         "adult": false,
-        "backdrop_path": null,
+        "backdrop_path": "/hehaK1jIuTOvRPGPccVivZcZ2Cb.jpg",
         "genre_ids": [
+            14,
+            10751,
             27
         ],
-        "id": 331839,
-        "title": "Rahsia",
+        "id": 10166,
+        "title": "The Witches",
         "original_language": "en",
-        "original_title": "Rahsia",
-        "overview": "It tells the story of a family whose recent loss of their daughter make them receptive to the haunting of a murdered child as they move into an old bungalow.",
-        "popularity": 3.22,
-        "poster_path": "/6evUr1bJgYfB6PmFY6XIEMR7dwX.jpg",
-        "release_date": "1987-01-01",
+        "original_title": "The Witches",
+        "overview": "While staying at a hotel in England with his grandmother, Helga, a young boy named Luke inadvertently spies on a convention of witches. The Grand High Witch reveals a plan to turn all children into mice via a magical formula. When they discover the eavesdropper, the witches test the formula on him. Now, with the help of Helga and hotel manager Mr Stringer, Luke the mouse must fight back against the witches.",
+        "popularity": 5.4994,
+        "poster_path": "/mPYBjVkeHakkPGY7WaKyyNU4RWm.jpg",
+        "release_date": "1990-05-25",
         "softcore": false,
         "video": false,
-        "vote_average": 10.0,
-        "vote_count": 1
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/zbbG9nDXKwnTYISrQVNx4RGBukI.jpg",
-        "genre_ids": [
-            28,
-            18,
-            27,
-            10749,
-            878
-        ],
-        "id": 860027,
-        "title": "Mask of the Evil Apparition",
-        "original_language": "en",
-        "original_title": "Mask of the Evil Apparition",
-        "overview": "A young woman lost in a nocturnal, dreamlike city, with her twin psychic brothers who try to help her find her way home as she is pursued by a shadowy cult known as The Mysterious Ones.",
-        "popularity": 1.2361,
-        "poster_path": "/76aCTw8Xd3gRMp5L39F3busi5LV.jpg",
-        "release_date": "2021-11-18",
-        "softcore": false,
-        "video": false,
-        "vote_average": 4.0,
-        "vote_count": 1
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/xjB1kX4CUDAYLkZyPJf3QJZIAxa.jpg",
-        "genre_ids": [
-            27
-        ],
-        "id": 1372160,
-        "title": "God of Frogs",
-        "original_language": "en",
-        "original_title": "God of Frogs",
-        "overview": "An Anthology film about four segments surrounding the same monster. Deep in the heart of the jungle exists an elemental creature with an eternal hunger, and every 25 years, it emerges: a woman is eaten alive in 1969, a film crew goes missing in 1994, a politician explodes live on television in 2019, and a multinational corporation goes up in flames in 2044.",
-        "popularity": 1.5227,
-        "poster_path": "/fwnXwNRnxwtCJXLsM0EiRm2Vvoc.jpg",
-        "release_date": "2026-03-02",
-        "softcore": false,
-        "video": false,
-        "vote_average": 6.3,
-        "vote_count": 3
+        "vote_average": 6.981,
+        "vote_count": 1443
     }
 ]

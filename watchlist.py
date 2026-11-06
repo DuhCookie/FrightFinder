@@ -1,5 +1,5 @@
 import json
-from helpers import create_numerated_list, header, select_movie, show_movie_info, action_menu
+from helpers import create_numerated_list, header, select_movie, show_movie_info, action_menu, create_table
 
 from rich.console import Console
 console = Console(force_terminal=True, legacy_windows=False, highlight=False)
@@ -38,13 +38,14 @@ def view_watchlist():
     if not watchlist:
         print("You haven't added any movies to your watchlist yet.")
     else:
-        create_numerated_list(watchlist, "title")
+        watchlist_table = create_table(None, watchlist, False, "title")
+        console.print(watchlist_table)
     return watchlist
 
 def remove_from_watchlist(selected_movie, index):
     while True:
         print(f"\nAre you sure you want to remove '{selected_movie.get("title")}' from your watchlist?")
-        choice = input("Y/N: ").capitalize()
+        choice = console.input("[bold on #800000]Y/N:[/] ").capitalize()
 
         if choice == "Y":
             watchlist = open_watchlist("r")
