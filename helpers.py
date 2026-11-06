@@ -33,6 +33,7 @@ def header(title):
 
 def create_numerated_list(received_list, menu=False, key=None, with_releaseyear=False):
     numerated_list = []
+
     if with_releaseyear:
         for index, result in enumerate(received_list, start=1):
             release_date = result.get("release_date")
@@ -41,12 +42,15 @@ def create_numerated_list(received_list, menu=False, key=None, with_releaseyear=
                 release_year = release_date.split("-")[0]
             else:
                 release_year = "TBA"
+
             movie_text = (f"{index}", f"{result.get(key).capitalize()} [italic #878686]({release_year})[/]")
             numerated_list.append(movie_text)
+
     elif menu:
         for index, text in enumerate(received_list, start=1):
             menu_text = (f"{index}", text)
             numerated_list.append(menu_text)
+
     else:
         for index, result in enumerate(received_list, start=1):
             movie_text = (f"{index}", result.get(key).capitalize())
@@ -128,6 +132,7 @@ def get_menu_input(option_count):
                 console.print(f"\nInvalid choice. \nPlease pick a number between 1 and {option_count}.\n")
                 logger.warning("Invalid menu option. Input is out of range.")
                 continue
+
         except ValueError:
             console.print("\nPlease enter a valid number.\n")
             logger.warning("Invalid menu option. Input is not an integer.")
@@ -193,28 +198,3 @@ def select_from_list(current_list, list_type="movies"):
 #     else:
 #         return "main menu"
 
-
-
-### DELETE
-
-def select_movie(movielist):
-    while True:
-        console.print("Choose a movie by entering its number. \nEnter 0 to return to the main menu.\n")
-        choice = int(console.input("[bold on #800000]Number:[/] "))
-
-        try:
-            if 1 <= choice <= len(movielist):
-                selected_movie = movielist[choice - 1]
-                console.print(f"Chosen movie: {selected_movie.get("title")}")
-                logger.info(f"User selected movie '{selected_movie.get("title")}'.")
-                return selected_movie, choice - 1
-            elif choice == 0:
-                return None, None
-            else:
-                console.print("\nYour selection is not on the list. Please try again.\n")
-                logger.warning("Invalid movie option. Input is out of range.")
-                continue
-        except ValueError:
-            console.print("\nPlease enter a valid number.\n")
-            logger.warning("Invalid movie option. Input is not an integer.")
-            continue

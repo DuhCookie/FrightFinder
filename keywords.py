@@ -38,22 +38,3 @@ def search_keyword():
 
         selected_id, selected_keyword = result
         return selected_id, selected_keyword
-
-#### DELETE
-
-def select_keyword(keywords=dict):
-    while True:
-        print("Choose a keyword by entering its number. \nEnter 0 to search for another keyword.\n")
-        choice = int(console.input("[bold on #800000]Number:[/] "))
-
-        if  1 <= choice <= len(keywords):
-            selected = keywords[choice - 1]
-            selected_id = selected.get("id")
-            selected_keyword = selected.get("name").capitalize()
-            console.print(f"\n[bold on #800000]Chosen keyword:[/] {selected_keyword}")
-            return selected_id, selected_keyword
-        elif choice == 0:
-            return None
-        else:
-            print("\nYour selection is not on the list. Please try again.")
-            continue
