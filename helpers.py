@@ -1,13 +1,23 @@
 import random
 import textwrap
-
+from logger import logger
 from rich.console import Console
 from rich.table import Table
+
 console = Console(force_terminal=True, legacy_windows=False, highlight=False)
 
-from logger import logger
 
 def create_table(title, rows, menu=True, key=None, with_releaseyear=False):
+    """
+    Creates a formatted table for display.
+
+    :param title: The title of the table.
+    :param rows: The data to display in the table.
+    :param menu: Determines whether the rows are menu options.
+    :param key: The key used to retrieve the value to display.
+    :param with_releaseyear: Determines whether the release year is displayed next to each movie title.
+    :return: A table
+    """
     if not title:
         table = Table(show_header=False, border_style="#CF0000")
     else:
@@ -23,6 +33,10 @@ def create_table(title, rows, menu=True, key=None, with_releaseyear=False):
     return table
 
 def header(title):
+    """
+    Displays a styled header.
+    :param title: The title displayed in the header.
+    """
     icon = get_random_icon()
     border = "꒷꒦︶꒷꒦︶꒷꒦" * 4
     title = f"{icon} {title} {icon}"
@@ -31,7 +45,20 @@ def header(title):
     console.print(title.center(len(border)), style="bold #ED2D2D")
     console.print(border, style="#CF0000")
 
-def create_numerated_list(received_list, menu=False, key=None, with_releaseyear=False):
+def create_numerated_list(received_list, is_menu=False, key=None, with_releaseyear=False):
+    """
+    Creates a numbered list for display in a table.
+
+    The function converts a list of items into a numbered format
+    that can be used in tables. Movie titles can optionally be
+    displayed together with their release year.
+
+    :param received_list: The list of items to be numbered.
+    :param is_menu: Determines whether the list contains menu options.
+    :param key: The key used to retrieve the value to display.
+    :param with_releaseyear: Determines whether the release year is displayed.
+    :return: A numbered list of formatted items.
+    """
     numerated_list = []
 
     if with_releaseyear:
@@ -46,7 +73,7 @@ def create_numerated_list(received_list, menu=False, key=None, with_releaseyear=
             movie_text = (f"{index}", f"{result.get(key).capitalize()} [italic #878686]({release_year})[/]")
             numerated_list.append(movie_text)
 
-    elif menu:
+    elif is_menu:
         for index, text in enumerate(received_list, start=1):
             menu_text = (f"{index}", text)
             numerated_list.append(menu_text)
@@ -59,6 +86,16 @@ def create_numerated_list(received_list, menu=False, key=None, with_releaseyear=
     return numerated_list
 
 def action_menu(movie_title, watchlist=False):
+    """
+    Displays the action menu for a selected movie.
+
+    Users can add a movie to their watchlist, remove it from
+    their watchlist or return to the previous menu.
+
+    :param movie_title: The title of the selected movie.
+    :param watchlist: Determines whether the movie is being viewed from the watchlist.
+    :return: 'add', 'remove', or 'back', depending on the user's choice.
+    """
     if watchlist:
         action = f"Remove {movie_title} from watchlist"
     else:
@@ -82,6 +119,15 @@ def action_menu(movie_title, watchlist=False):
             return "back"
 
 def show_movie_info(movie):
+    """
+    Displays information about a selected movie.
+
+    The movie's title, summary, rating, release date
+    and language are displayed to the user.
+
+    :param movie: A dictionary containing information about the movie.
+    :return: The title of the selected movie.
+    """
     title = movie.get("title")
     rating = movie.get("vote_average")
     release_date = movie.get("release_date")
@@ -104,6 +150,10 @@ def show_movie_info(movie):
     return title
 
 def get_random_icon():
+    """
+    Generates a random horror-themed icon.
+    :return: A random horror-themed icon.
+    """
     icons = {
         1: "🕯️",
         2: "🎃",
@@ -122,11 +172,15 @@ def get_random_icon():
     return icons.get(icon_number)
 
 def get_menu_input(option_count):
+    """
+    Prompts the user to select a menu option by entering a number.
+    :param option_count: Number of available menu options.
+    :return: The selected menu option.
+    """
     while True:
         try:
             choice = int(console.input("[bold on #800000]Number:[/] "))
             if 1 <= choice <= option_count:
-                logger.info(f"User selected menu option {choice}.")
                 return choice
             else:
                 console.print(f"\nInvalid choice. \nPlease pick a number between 1 and {option_count}.\n")
@@ -139,6 +193,12 @@ def get_menu_input(option_count):
             continue
 
 def select_from_list(current_list, list_type="movies"):
+    """
+    Allows the user to select a movie or keyword from a list.
+    :param current_list: The list of movies or keywords.
+    :param list_type: The type of list being displayed.
+    :return: The selected item with related information, or None
+    """
     if list_type == "movies":
         subject = "movie"
         prompt = "Choose a movie by entering its number. \nEnter 0 to return to the main menu.\n"
@@ -157,7 +217,7 @@ def select_from_list(current_list, list_type="movies"):
                 selected = current_list[choice - 1]
                 selected_subject = selected.get(key).capitalize()
                 console.print(f"\n[bold on #800000]Chosen {subject}:[/] {selected_subject}")
-                logger.info(f"User selected {subject} '{selected.get(key)}'.")
+                logger.info(f"User selected {subject}: '{selected.get(key)}'.")
 
                 if list_type == "movies":
                     return selected, choice - 1
@@ -182,19 +242,5 @@ def select_from_list(current_list, list_type="movies"):
 
 
 
-# def handle_movie_selection(movielist):
-#     selected_movie, movie_index = select_movie(movielist)
-#     if selected_movie is None:
-#         return "main menu"
-#
-#     movie_title = show_movie_info(selected_movie)
-#     action = action_menu(movie_title, selected_movie)
-#     if action == "add":
-#         return "add"
-#     elif action == "remove":
-#         return "remove"
-#     elif action == "back":
-#         return "back"
-#     else:
-#         return "main menu"
+
 

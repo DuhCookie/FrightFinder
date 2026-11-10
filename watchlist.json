@@ -22,27 +22,6 @@
     },
     {
         "adult": false,
-        "backdrop_path": "/A1dZ6faTjg0e6HYftBmEKujuXGQ.jpg",
-        "genre_ids": [
-            35,
-            14,
-            27
-        ],
-        "id": 917496,
-        "title": "Beetlejuice Beetlejuice",
-        "original_language": "en",
-        "original_title": "Beetlejuice Beetlejuice",
-        "overview": "After a family tragedy, three generations of the Deetz family return home to Winter River. Still haunted by Betelgeuse, Lydia's life is turned upside down when her teenage daughter, Astrid, accidentally opens the portal to the Afterlife.",
-        "popularity": 19.7735,
-        "poster_path": "/kKgQzkUCnQmeTPkyIwHly2t6ZFI.jpg",
-        "release_date": "2024-09-04",
-        "softcore": false,
-        "video": false,
-        "vote_average": 6.913,
-        "vote_count": 3433
-    },
-    {
-        "adult": false,
         "backdrop_path": "/6tuNQ16hC4Qp7wjTweKzUnnLBkI.jpg",
         "genre_ids": [
             27,
@@ -60,25 +39,6 @@
         "video": false,
         "vote_average": 6.713,
         "vote_count": 6961
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/zfw3fcF7d4KcWYEvps4zUfl303b.jpg",
-        "genre_ids": [
-            27
-        ],
-        "id": 21484,
-        "title": "Possession",
-        "original_language": "en",
-        "original_title": "Possession",
-        "overview": "A young woman left her family for an unspecified reason. The husband determines to find out the truth and starts following his wife. At first, he suspects that a man is involved. But gradually, he finds out more and more strange behaviors and bizarre incidents that indicate something more than a possessed love affair.",
-        "popularity": 10.2924,
-        "poster_path": "/A9bnRn05riOKWftvQlLKa2gl51n.jpg",
-        "release_date": "1981-05-27",
-        "softcore": false,
-        "video": false,
-        "vote_average": 7.317,
-        "vote_count": 1500
     },
     {
         "adult": false,
@@ -101,26 +61,6 @@
     },
     {
         "adult": false,
-        "backdrop_path": "/92VhOIRgkI4s1zCwc6VQPkZNKyA.jpg",
-        "genre_ids": [
-            28,
-            27
-        ],
-        "id": 1268037,
-        "title": "The Summoner",
-        "original_language": "en",
-        "original_title": "The Summoner",
-        "overview": "In a world where spirits of the dead are the most pervasive and dangerous threat we face, humankind must call upon the skills of an enigmatic ghost-hunter who gets more than he bargained for facing the most deadly threat of his career.",
-        "popularity": 1.8788,
-        "poster_path": "/o102xFACWhs4xlZI1BZQU9G1IAE.jpg",
-        "release_date": "2017-11-08",
-        "softcore": false,
-        "video": false,
-        "vote_average": 0.0,
-        "vote_count": 0
-    },
-    {
-        "adult": false,
         "backdrop_path": "/bHfGHipZ32Oec94FDJO4mWs3aZ5.jpg",
         "genre_ids": [
             27
@@ -137,46 +77,6 @@
         "video": false,
         "vote_average": 6.746,
         "vote_count": 2094
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/sTvhx1gqmQklmf9LDSnjLN6mvTd.jpg",
-        "genre_ids": [
-            27
-        ],
-        "id": 818883,
-        "title": "The Devil's Child",
-        "original_language": "es",
-        "original_title": "Diavlo",
-        "overview": "A young American nurse finds herself haunted by childhood trauma, when she is employed at a remote house to care for a sinister old man with psychic powers.",
-        "popularity": 1.685,
-        "poster_path": "/47xEQRZrfBPCSWgKpScLuXIsJxL.jpg",
-        "release_date": "2022-04-28",
-        "softcore": false,
-        "video": false,
-        "vote_average": 6.1,
-        "vote_count": 9
-    },
-    {
-        "adult": false,
-        "backdrop_path": "/utABPVjXBlM8NUOBecCyLLuzQSe.jpg",
-        "genre_ids": [
-            18,
-            27,
-            53
-        ],
-        "id": 17609,
-        "title": "Antichrist",
-        "original_language": "en",
-        "original_title": "Antichrist",
-        "overview": "A grieving couple retreats to their cabin 'Eden' in the woods, hoping to repair their broken hearts and troubled marriage. But nature takes its course and things go from bad to worse.",
-        "popularity": 5.5535,
-        "poster_path": "/ge7zbYvpfsDP3luKi0iSpzOgncM.jpg",
-        "release_date": "2009-05-20",
-        "softcore": false,
-        "video": false,
-        "vote_average": 6.608,
-        "vote_count": 2958
     },
     {
         "adult": false,
@@ -239,5 +139,25 @@
         "video": false,
         "vote_average": 6.981,
         "vote_count": 1443
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/4QwtFTo7e8pfh0HCklVng5xun3y.jpg",
+        "genre_ids": [
+            27,
+            9648
+        ],
+        "id": 11096,
+        "title": "Hide and Seek",
+        "original_language": "en",
+        "original_title": "Hide and Seek",
+        "overview": "David Callaway tries to piece together his life in the wake of his wife's suicide and has been left to raise his nine-year-old daughter, Emily on his own. David is at first amused to discover that Emily has created an imaginary friend named 'Charlie', but it isn't long before 'Charlie' develops a sinister and violent side, and as David struggles with his daughter's growing emotional problems, he comes to the frightening realisation that 'Charlie' isn't just a figment of Emily's imagination.",
+        "popularity": 3.1829,
+        "poster_path": "/orY4PX3TNFdCbdVwhKY32UKMvoA.jpg",
+        "release_date": "2005-01-27",
+        "softcore": false,
+        "video": false,
+        "vote_average": 6.3,
+        "vote_count": 1813
     }
 ]
